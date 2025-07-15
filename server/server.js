@@ -12,6 +12,7 @@ import { inngest, functions } from "./inngest/index.js"
 const app=express();
 const port=3000;
 
+
 await connectDB()
 
 //middleware
@@ -25,5 +26,5 @@ app.use("/api/inngest", serve({ client: inngest, functions }));
 
 
 
-// app.listen(port,()=>console.log(`server listening at http://localhost:${port}`));
+app.listen(port,()=>console.log(`server listening at http://localhost:${port}`));
 export default app;
